@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Analytics
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label color="primary">over all perfomance</ion-label>
+  <ion-card>
+    <ion-card-header>
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label>6th Mathematics <ion-icon name="arrow-down"></ion-icon>
+    </ion-label>
+  </ion-item>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <canvas #doughnutCanvas></canvas>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <p>Avg Percentage</p>
+              <h1 color="primary">30%</h1>
+            </div>
+            <div>
+              <ion-label>Total Students</ion-label>
+              <h1 color="primary">34</h1>
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Line Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="Weekely">
+      <ion-label>Weekely</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Monthly">
+      <ion-label>Monthly</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Yearly">
+      <ion-label>Yearly</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-label>Total Test</ion-label>
+              <h1 color="primary">45</h1>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-label>Total Practies</ion-label>
+              <h1 color="primary">75</h1>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-label>Avg.Test Time</ion-label>
+              <h1 color="primary">5m 3s</h1>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-label>Ave.practice time</ion-label>
+              <h1 color="primary">4m 3s</h1>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
